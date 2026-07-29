@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+release/
+web-ext-artifacts/
+node_modules/

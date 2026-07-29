@@ -1,0 +1,32 @@
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tumblr Community Multi-Reblog</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <div class="status" id="status"><span></span><b>Checking Tumblr…</b></div>
+      <h1>Multi-Reblog</h1>
+      <ol>
+        <li>Open a post’s <strong>Reblog…</strong> composer.</li>
+        <li>Select the destination at the top.</li>
+        <li>Open <strong>Communities</strong>.</li>
+        <li>Select multiple Communities and choose <strong>Reblog to N</strong>.</li>
+      </ol>
+      <p>The controls appear inside Tumblr’s Communities picker—not directly on the dashboard.</p>
+      <p class="diagnostic" id="diagnostic"></p>
+      <section class="batch" id="batch" hidden>
+        <div class="batch-heading">
+          <strong>Latest batch</strong>
+          <span id="batch-summary"></span>
+        </div>
+        <div class="batch-results" id="batch-results"></div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

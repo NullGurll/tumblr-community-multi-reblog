@@ -1,0 +1,148 @@
+/* SPDX-License-Identifier: MPL-2.0 */
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  width: 310px;
+  margin: 0;
+  color: #fff;
+  background: #001935;
+}
+
+main {
+  padding: 18px;
+}
+
+h1 {
+  margin: 14px 0 12px;
+  font-size: 22px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #a7f3b8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status.warning {
+  color: #ffd166;
+}
+
+.status.warning span {
+  background: #ffd166;
+  box-shadow: 0 0 0 4px rgba(255, 209, 102, 0.15);
+}
+
+.status.error {
+  color: #ff8d7d;
+}
+
+.status.error span {
+  background: #ff4930;
+  box-shadow: 0 0 0 4px rgba(255, 73, 48, 0.15);
+}
+
+.status span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #00cf35;
+  box-shadow: 0 0 0 4px rgba(0, 207, 53, 0.15);
+}
+
+ol {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+p {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.diagnostic {
+  border-top: 0;
+  margin-top: 8px;
+  padding-top: 0;
+  color: #9fdfff;
+}
+
+.batch {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.batch-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.batch-heading span {
+  color: rgba(255, 255, 255, 0.62);
+  text-align: right;
+}
+
+.batch-results {
+  max-height: 230px;
+  overflow: auto;
+}
+
+.batch-row {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 12px;
+}
+
+.batch-row + .batch-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.batch-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #66788a;
+}
+
+.batch-row[data-status="posted"] .batch-dot {
+  background: #00cf35;
+}
+
+.batch-row[data-status="retrying"] .batch-dot,
+.batch-row[data-status="posting"] .batch-dot {
+  background: #ffd166;
+}
+
+.batch-row[data-status="failed"] .batch-dot {
+  background: #ff4930;
+}
+
+.batch-name {
+  overflow-wrap: anywhere;
+}
+
+.batch-attempts {
+  color: rgba(255, 255, 255, 0.52);
+  white-space: nowrap;
+}

@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Tumblr Community Multi-Reblog",
+  "version": "1.5.5",
+  "description": "Select several Tumblr Communities and reblog to all of them with one confirmation.",
+  "minimum_chrome_version": "122",
+  "permissions": [
+    "activeTab",
+    "notifications",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.tumblr.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Tumblr Community Multi-Reblog",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icons/icon-32.svg",
+      "48": "icons/icon-48.svg",
+      "96": "icons/icon-96.svg"
+    }
+  },
+  "icons": {
+    "32": "icons/icon-32.svg",
+    "48": "icons/icon-48.svg",
+    "96": "icons/icon-96.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.tumblr.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
