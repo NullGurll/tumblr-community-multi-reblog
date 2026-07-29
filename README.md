@@ -20,7 +20,7 @@ once, and the extension processes each reblog sequentially in a background tab.
 | Folder | Browser | Package |
 | --- | --- | --- |
 | `firefox/` | Firefox and Zen Browser | `.xpi` |
-| `brave/` | Brave, Chrome, Edge, Opera, Vivaldi, and other Chromium-based browsers | `.zip` |
+| `chromium/` | Chromium-based browsers, including Brave, Chrome, Edge, Opera, and Vivaldi | `.zip` |
 
 Firefox and Zen use the WebExtensions `browser` API and share the same XPI.
 Chromium-based browsers use the equivalent `chrome` API build.
@@ -40,7 +40,7 @@ Chromium-based browsers use the equivalent `chrome` API build.
    `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Choose **Load unpacked**.
-4. Select the `brave/` folder.
+4. Select the `chromium/` folder.
 
 ## Use
 
@@ -78,8 +78,8 @@ node --check firefox/background.js
 node --check firefox/content.js
 node --check zen/background.js
 node --check zen/content.js
-node --check brave/background.js
-node --check brave/content.js
+node --check chromium/background.js
+node --check chromium/content.js
 ```
 
 ## License
