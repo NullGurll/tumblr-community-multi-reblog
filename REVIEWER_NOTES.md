@@ -24,9 +24,9 @@ privately in the AMO submission's reviewer notes if required.
 
 ## Source and build process
 
-There is no build process. The submitted Firefox package contains the files in
-`firefox/` unchanged. The code is plain, human-readable JavaScript, HTML, and
-CSS. It is not bundled or minified and does not load remote code.
+There is no build process. The submitted Firefox and Zen package contains the
+files in `firefox/` unchanged. The code is plain, human-readable JavaScript,
+HTML, and CSS. It is not bundled or minified and does not load remote code.
 
 ## Permissions
 

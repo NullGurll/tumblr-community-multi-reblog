@@ -19,30 +19,25 @@ once, and the extension processes each reblog sequentially in a background tab.
 
 | Folder | Browser | Package |
 | --- | --- | --- |
-| `firefox/` | Firefox | `.xpi` |
-| `zen/` | Zen Browser | `.zip` |
-| `brave/` | Brave and Chromium | `.zip` |
+| `firefox/` | Firefox and Zen Browser | `.xpi` |
+| `brave/` | Brave, Chrome, Edge, Opera, Vivaldi, and other Chromium-based browsers | `.zip` |
 
-Firefox and Zen use the WebExtensions `browser` API. Brave uses the equivalent
-Chromium `chrome` API.
+Firefox and Zen use the WebExtensions `browser` API and share the same XPI.
+Chromium-based browsers use the equivalent `chrome` API build.
 
 ## Install for testing
 
-### Firefox
+### Firefox and Zen Browser
 
 1. Open `about:debugging`.
 2. Choose **This Firefox**.
 3. Select **Load Temporary Add-on**.
 4. Select `firefox/manifest.json`.
 
-### Zen Browser
+### Chromium-based browsers
 
-Use Zen's Firefox-compatible temporary add-on screen and select
-`zen/manifest.json`.
-
-### Brave
-
-1. Open `brave://extensions`.
+1. Open the browser's extensions page, such as `brave://extensions` or
+   `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Choose **Load unpacked**.
 4. Select the `brave/` folder.
