@@ -1,4 +1,4 @@
-# Tumblr Community Multi-Reblog
+# Tumblr Community Reblogger — Multi-Community Reblog Tool
 
 Tumblr Community Multi-Reblog adds multi-select controls to Tumblr's native
 Community destination picker. Select two or more Communities, approve the batch
